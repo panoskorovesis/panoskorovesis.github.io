@@ -8,11 +8,12 @@
       <url>https://panoskorovesis.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://panoskorovesis.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://panoskorovesis.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 14 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Summer of Code 2021 Final Paper</title>
       <link>https://panoskorovesis.github.io/posts/second-post-gsoc-report/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 14 Aug 2021 11:30:03 +0000</pubDate>
       
       <guid>https://panoskorovesis.github.io/posts/second-post-gsoc-report/</guid>
       <description>The work I have done this summer for LibreOffice is summarized here</description>

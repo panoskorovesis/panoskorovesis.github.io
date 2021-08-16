@@ -9,22 +9,22 @@
       <link>https://panoskorovesis.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paper</title>
+      <link>https://panoskorovesis.github.io/categories/paper/</link>
+      <pubDate>Sat, 14 Aug 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://panoskorovesis.github.io/categories/paper/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>aboutme</title>
       <link>https://panoskorovesis.github.io/categories/aboutme/</link>
       <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
       
       <guid>https://panoskorovesis.github.io/categories/aboutme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paper</title>
-      <link>https://panoskorovesis.github.io/categories/paper/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/categories/paper/</guid>
       <description></description>
     </item>
     

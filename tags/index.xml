@@ -9,20 +9,11 @@
       <link>https://panoskorovesis.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>aboutme</title>
-      <link>https://panoskorovesis.github.io/tags/aboutme/</link>
-      <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/tags/aboutme/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 14 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GSoC</title>
       <link>https://panoskorovesis.github.io/tags/gsoc/</link>
-      <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
+      <pubDate>Sat, 14 Aug 2021 11:30:03 +0000</pubDate>
       
       <guid>https://panoskorovesis.github.io/tags/gsoc/</guid>
       <description></description>
@@ -31,9 +22,18 @@
     <item>
       <title>LibreOffice</title>
       <link>https://panoskorovesis.github.io/tags/libreoffice/</link>
-      <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
+      <pubDate>Sat, 14 Aug 2021 11:30:03 +0000</pubDate>
       
       <guid>https://panoskorovesis.github.io/tags/libreoffice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aboutme</title>
+      <link>https://panoskorovesis.github.io/tags/aboutme/</link>
+      <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
+      
+      <guid>https://panoskorovesis.github.io/tags/aboutme/</guid>
       <description></description>
     </item>
     

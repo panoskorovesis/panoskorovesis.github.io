@@ -25,13 +25,14 @@
 <meta property="og:description" content="The work I have done this summer for LibreOffice is summarized here">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://panoskorovesis.github.io/posts/second-post-gsoc-report/"><meta property="og:image" content="https://panoskorovesis.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
-<meta property="og:site_name" content="Panos Blog">
+<meta property="article:published_time" content="2021-08-14T11:30:03+00:00">
+<meta property="article:modified_time" content="2021-08-14T11:30:03+00:00"><meta property="og:site_name" content="Panos Blog">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://panoskorovesis.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
 <meta name=twitter:title content="Google Summer of Code 2021 Final Paper">
 <meta name=twitter:description content="The work I have done this summer for LibreOffice is summarized here">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://panoskorovesis.github.io/posts/"},{"@type":"ListItem","position":3,"name":"Google Summer of Code 2021 Final Paper","item":"https://panoskorovesis.github.io/posts/second-post-gsoc-report/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Google Summer of Code 2021 Final Paper","name":"Google Summer of Code 2021 Final Paper","description":"The work I have done this summer for LibreOffice is summarized here","keywords":["GSoC","LibreOffice"],"articleBody":"Google Summer of Code 2021 Work Product Submission Introduction Hi, my name is Panos Korovesis and in 2021 I was accepted in the Google Summer of Code program. I chose a project from LibreOffice and I work under the mentorship of Tomaž Vajngerl and Miklos Vajna. The objective of the project was to complete the missing import/export tests of the SVM format and then separate the writing/reading functionality of the VCL Metafile to its own classes, in order to allow further refactoring of the VCL.\nTechnical Overview This project can be broken down in five distinct phases.\n Phase One - Missing SVM Tests (merged): This part included the completion of the commented out methods in svmtest.cxx. In some cases additions were required in mtfxmldump.cxx in order for the svm file to be produced. Phase Two - SvmReader (merged): This part included the creation of a new class SvmReader.hxx in order to handle the reading functionality of the VCL. Reading is done with SvmReader::Read method, which works as follows:  Sets up the stream, as was previously done in ReadGDIMetaFile For each MetaAction call the created MetaActionHandler The MetaActionHandler calls the appropriate read handler - which performs the reading - (e.g PixelHandler) for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Read methods. Note: In order for the read handlers to work, Set methods had to be created for each MetaAct’s protected members (one can be seen here).   Phase Three - SvmWriter (merged): This part included the creation of a new class SvmWriter.hxx in order to handle the writing functionality of the VCL. Writing is done with SvmWriter::Write method, which works as follows:  Sets up the stream, as was previously done in GDIMetaFile::Write For each MetaAction in the MetaFile, call the created MetaActionHandler The MetaActionHandler calls the appropriate write handler - which performs the writing - (e.g PointHandler) for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Write methods.   Phase Four - Replacing (partially merged): The reading/writing was performed by four methods. Those are: GDIMetaFile::Read, GDIMetaFile::Write, ReadGDIMetaFile, WriteGDIMetaFile. Whereas the new functionality is performed by SvmWriter::Write and SvmReader::Read. This part included the replacement of the method calls of the methods mentioned above with the new ones (SvmWriter::Write, SvmReader::Read) Note: GDIMetaFile::GetChecksum had to be moved in SvmWriter because it was using the MetaAction::Write method. Phase Five - Cleanup (not merged): This part included the deletion of methods that were no longer in use. Those were:  GDIMetaFile::Write GDIMetaFile::Read WriteGDIMetaFile ReadGDIMetaFile MetaAction::Write MetaAction::Read GDIMetaFile::GetChecksum    Commits A list with all the commits that have been merged can be found at: https://cgit.freedesktop.org/libreoffice/core/log/?qt=author\u0026q=panos\nA list with all the commits that have not been merged yet can be found at: https://cgit.freedesktop.org/libreoffice/core/log/?qt=author\u0026q=panos\u0026h=feature%2Fgsoc-svm-writer (the title contains “feature/gsoc-svm-writer”)\nSome important commits for each phase are listed below:\nPhase One (merged) The commits regarding this phase start from Add RefPoint cppunit test to vcl and end at Add FloatTransparent cppunit test to vcl.\nExample: Add Comment cppunit test to vcl\n Fill the TestComment method with the required elements to be tested. They are then written in a .svm file in xml format Create a CheckComment method, which checks if the Comment attributes declared in the method above are the expected in the xml Modify mtfxmldump.cxx to format the xml output in the format we need  Phase Two (merged) The commits regarding this phase start from Create Separate SvmReader class and end at Add Handler for MetaAction Read.\nExample: Create Separate SvmReader class\n Create the required files for a new class and update the appropriate makefile Create a constructor Create the Read method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Read). The next commits start replacing it with the new one. Update svmtest.cxx in order to use SvmReader::Read instead of GDIMetaFile::Read  Example: Add Handler for MetaPoint Read\n Create the PointHandler Create Set methods for MetaPointAction private members, as they are required by the PointHandler Adjust the MetaActionHandler to call the PointHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Read  Phase Three (merged) The commits regarding this phase start from Create SvmWriter class and end at Add Handler for TextLineColor Write\nExample: Create SvmWriter class\n Create the required files for a new class and update the appropriate makefile Create a constructor Create the MetaActionHandler and the ActionHandler which replaces MetaAction::Write. Create the Write method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Write) for all actions except MetaAction. The next commits continue replacing with the new one. Update svmtest.cxx in order to use SvmWriter::Write instead of GDIMetaFile::Write  Example: Add Handler for Ellipse Write\n Create the EllipseHandler Adjust the MetaActionHandler to call the EllipseHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Write  Phase Four (partially merged) The commits regarding this phase start with “Replace”\nExample: Replace ReadGDIMetaFile with Svmreader::Read\n Removes the old method call Creates a SvmReader object and calls SvmReader::Read, thus replacing the old Read with the new Note: These steps are repeated for each file that needs replacing  ","wordCount":"857","inLanguage":"en","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","author":{"@type":"Person","name":"Panos Korovesis"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://panoskorovesis.github.io/posts/second-post-gsoc-report/"},"publisher":{"@type":"Organization","name":"Blog","logo":{"@type":"ImageObject","url":"https://panoskorovesis.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Google Summer of Code 2021 Final Paper","name":"Google Summer of Code 2021 Final Paper","description":"The work I have done this summer for LibreOffice is summarized here","keywords":["GSoC","LibreOffice"],"articleBody":"Google Summer of Code 2021 Work Product Submission Introduction Hi, my name is Panos Korovesis and in 2021 I was accepted in the Google Summer of Code program. I chose a project from LibreOffice and I work under the mentorship of Tomaž Vajngerl and Miklos Vajna. The objective of the project was to complete the missing import/export tests of the SVM format and then separate the writing/reading functionality of the VCL Metafile to its own classes, in order to allow further refactoring of the VCL.\nTechnical Overview This project can be broken down in five distinct phases.\n Phase One - Missing SVM Tests (merged): This part included the completion of the commented out methods in svmtest.cxx. In some cases additions were required in mtfxmldump.cxx in order for the svm file to be produced. Phase Two - SvmReader (merged): This part included the creation of a new class SvmReader.hxx in order to handle the reading functionality of the VCL. Reading is done with SvmReader::Read method, which works as follows:  Sets up the stream, as was previously done in ReadGDIMetaFile For each MetaAction call the created MetaActionHandler The MetaActionHandler calls the appropriate read handler - which performs the reading - (e.g PixelHandler) for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Read methods. Note: In order for the read handlers to work, Set methods had to be created for each MetaAct’s protected members (one can be seen here).   Phase Three - SvmWriter (merged): This part included the creation of a new class SvmWriter.hxx in order to handle the writing functionality of the VCL. Writing is done with SvmWriter::Write method, which works as follows:  Sets up the stream, as was previously done in GDIMetaFile::Write For each MetaAction in the MetaFile, call the created MetaActionHandler The MetaActionHandler calls the appropriate write handler - which performs the writing - (e.g PointHandler) for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Write methods.   Phase Four - Replacing (partially merged): The reading/writing was performed by four methods. Those are: GDIMetaFile::Read, GDIMetaFile::Write, ReadGDIMetaFile, WriteGDIMetaFile. Whereas the new functionality is performed by SvmWriter::Write and SvmReader::Read. This part included the replacement of the method calls of the methods mentioned above with the new ones (SvmWriter::Write, SvmReader::Read) Note: GDIMetaFile::GetChecksum had to be moved in SvmWriter because it was using the MetaAction::Write method. Phase Five - Cleanup (not merged): This part included the deletion of methods that were no longer in use. Those were:  GDIMetaFile::Write GDIMetaFile::Read WriteGDIMetaFile ReadGDIMetaFile MetaAction::Write MetaAction::Read GDIMetaFile::GetChecksum    Commits A list with all the commits that have been merged can be found at: https://git.libreoffice.org/core/+log?pretty=oneline\u0026author=panoskorovesis%40outlook.com\nA list with all the commits that are online on gerrit can be found at: https://gerrit.libreoffice.org/q/owner:panoskorovesis%2540outlook.com (look for changes with empty “Code review” box)\nSome important commits for each phase are listed below:\nPhase One (merged) The commits regarding this phase start from Add RefPoint cppunit test to vcl and end at Add FloatTransparent cppunit test to vcl.\nExample: Add Comment cppunit test to vcl\n Fill the TestComment method with the required elements to be tested. They are then written in a .svm file in xml format Create a CheckComment method, which checks if the Comment attributes declared in the method above are the expected in the xml Modify mtfxmldump.cxx to format the xml output in the format we need  Phase Two (merged) The commits regarding this phase start from Create Separate SvmReader class and end at Add Handler for MetaAction Read.\nExample: Create Separate SvmReader class\n Create the required files for a new class and update the appropriate makefile Create a constructor Create the Read method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Read). The next commits start replacing it with the new one. Update svmtest.cxx in order to use SvmReader::Read instead of GDIMetaFile::Read  Example: Add Handler for MetaPoint Read\n Create the PointHandler Create Set methods for MetaPointAction private members, as they are required by the PointHandler Adjust the MetaActionHandler to call the PointHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Read  Phase Three (merged) The commits regarding this phase start from Create SvmWriter class and end at Add Handler for TextLineColor Write\nExample: Create SvmWriter class\n Create the required files for a new class and update the appropriate makefile Create a constructor Create the MetaActionHandler and the ActionHandler which replaces MetaAction::Write. Create the Write method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Write) for all actions except MetaAction. The next commits continue replacing with the new one. Update svmtest.cxx in order to use SvmWriter::Write instead of GDIMetaFile::Write  Example: Add Handler for Ellipse Write\n Create the EllipseHandler Adjust the MetaActionHandler to call the EllipseHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Write  Phase Four (partially merged) The commits regarding this phase start with “Replace”\nExample: Replace ReadGDIMetaFile with Svmreader::Read\n  Removes the old method call\n  Creates a SvmReader object and calls SvmReader::Read, thus replacing the old Read with the new\nNote: These steps are repeated for each file that needs replacing\n  Phase Five (not merged) The commits regarding this phase start with “Remove”. It also includes the commit Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum\nExample: Remove unused methods from gdimtf.hxx\n  Removes GDIMetaFile::Read\n  Removes GDIMetaFile::Write\n  Removes ReadGDIMetaFile\n  Removes WriteGDIMetaFile\nNote: This can be done, as the functionality of the removed methods is covered by SvmReader, SvmWriter.\n  Example: Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum\n  Moves the method to SvmWriter while applying any changes needed in order to be compatible\n  Removes the method from it’s initial location\nNote: This change was required as the method was using MetaAction::Write, which is replaced by the SvmWriter.\n  Next Steps The remaining steps for the completion of the project are the following:\n Merge the current online patches on gerrit and make small changes if needed Go through the tests of the svm format trying to find edge  Those steps do not need to be implemented by someone else however as I am determined to see this project to the end, even if it it goes beyond the GSoC Coding period.\nConclusion Working at LibreOffice was a beautiful experience. Getting in touch with people all over the world while aiming at the same goal was something new for me, but definitely something I will seek in the future! I would also like to thank the dev community for it’s constant support on all my questions (silly or not) and especially my mentors Tomaž Vajngerl, Miklos Vajna for their continuous support as without them I would not be able to progress. Lastly, as I had a great experience, I plan to continue contributing to LibreOffice in the feature! Sere you all around!\n","wordCount":"1128","inLanguage":"en","datePublished":"2021-08-14T11:30:03Z","dateModified":"2021-08-14T11:30:03Z","author":{"@type":"Person","name":"Panos Korovesis"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://panoskorovesis.github.io/posts/second-post-gsoc-report/"},"publisher":{"@type":"Organization","name":"Blog","logo":{"@type":"ImageObject","url":"https://panoskorovesis.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -72,7 +73,7 @@ Google Summer of Code 2021 Final Paper
 <div class=post-description>
 The work I have done this summer for LibreOffice is summarized here
 </div>
-<div class=post-meta>5 min&nbsp;·&nbsp;Panos Korovesis
+<div class=post-meta>14 August, 2021&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Panos Korovesis
 </div>
 </header>
 <div class=post-content><h2 id=google-summer-of-code-2021-work-product-submission>Google Summer of Code 2021 Work Product Submission<a hidden class=anchor aria-hidden=true href=#google-summer-of-code-2021-work-product-submission>#</a></h2>
@@ -112,35 +113,36 @@ The work I have done this summer for LibreOffice is summarized here
 </li>
 </ul>
 <h3 id=commits>Commits<a hidden class=anchor aria-hidden=true href=#commits>#</a></h3>
-<p>A list with all the commits that have been <strong>merged</strong> can be found at: <a href="https://cgit.freedesktop.org/libreoffice/core/log/?qt=author&q=panos">https://cgit.freedesktop.org/libreoffice/core/log/?qt=author&q=panos</a></p>
-<p>A list with all the commits that have <strong>not been merged yet</strong> can be found at: <a href="https://cgit.freedesktop.org/libreoffice/core/log/?qt=author&q=panos&h=feature%2Fgsoc-svm-writer">https://cgit.freedesktop.org/libreoffice/core/log/?qt=author&q=panos&h=feature%2Fgsoc-svm-writer</a> (the title contains “feature/gsoc-svm-writer”)</p>
+<p>A list with all the commits that have been <strong>merged</strong> can be found at: <a href="https://git.libreoffice.org/core/+log?pretty=oneline&author=panoskorovesis%40outlook.com">https://git.libreoffice.org/core/+log?pretty=oneline&author=panoskorovesis%40outlook.com</a></p>
+<p>A list with all the commits that are <strong>online on gerrit</strong> can be found at: <a href=https://gerrit.libreoffice.org/q/owner:panoskorovesis%2540outlook.com>https://gerrit.libreoffice.org/q/owner:panoskorovesis%2540outlook.com</a> (look for changes with empty
+&ldquo;Code review&rdquo; box)</p>
 <p>Some <strong>important commits</strong> for each phase are listed below:</p>
 <p><strong>Phase One (merged)</strong>
-The commits regarding this phase start from <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=1adbb3e00593af8eed5baf7019fa9b177186567c">Add RefPoint cppunit test to vcl</a> and end at <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=0aa7ee7827fc77b5b4c0479402bfbd9a4e5d9e84">Add FloatTransparent cppunit test to vcl</a>.</p>
-<p>Example: <a href="https://cgit.freedesktop.org/libreoffice/core/diff/vcl/source/gdi/mtfxmldump.cxx?id=e10df88b8ae4138862d4dd25c221189878641aa4">Add Comment cppunit test to vcl</a></p>
+The commits regarding this phase start from <a href=https://git.libreoffice.org/core/+/1adbb3e00593af8eed5baf7019fa9b177186567c>Add RefPoint cppunit test to vcl</a> and end at <a href=https://git.libreoffice.org/core/+/0aa7ee7827fc77b5b4c0479402bfbd9a4e5d9e84>Add FloatTransparent cppunit test to vcl</a>.</p>
+<p>Example: <a href=https://git.libreoffice.org/core/+/e10df88b8ae4138862d4dd25c221189878641aa4>Add Comment cppunit test to vcl</a></p>
 <ul>
 <li>Fill the TestComment method with the required elements to be tested. They are then written in a .svm file in xml format</li>
 <li>Create a CheckComment method, which checks if the Comment attributes declared in the method above are the expected in the xml</li>
 <li>Modify mtfxmldump.cxx to format the xml output in the format we need</li>
 </ul>
 <p><strong>Phase Two (merged)</strong>
-The commits regarding this phase start from <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=960d8c227bf39c66b5366f6024635ee317c6b314">Create Separate SvmReader class</a> and end at <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=a66dc788d92d9ef0ab6a5a0339f02df0c39b97fb">Add Handler for MetaAction Read</a>.</p>
-<p>Example: <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=960d8c227bf39c66b5366f6024635ee317c6b314">Create Separate SvmReader class</a></p>
+The commits regarding this phase start from <a href=https://git.libreoffice.org/core/+/960d8c227bf39c66b5366f6024635ee317c6b314>Create Separate SvmReader class</a> and end at <a href=https://git.libreoffice.org/core/+/a66dc788d92d9ef0ab6a5a0339f02df0c39b97fb>Add Handler for MetaAction Read</a>.</p>
+<p>Example: <a href=https://git.libreoffice.org/core/+/960d8c227bf39c66b5366f6024635ee317c6b314>Create Separate SvmReader class</a></p>
 <ul>
 <li>Create the required files for a new class and update the appropriate makefile</li>
 <li>Create a constructor</li>
 <li>Create the Read method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Read). The next commits start replacing it with the new one.</li>
 <li>Update svmtest.cxx in order to use SvmReader::Read instead of GDIMetaFile::Read</li>
 </ul>
-<p>Example: <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=c23b42ce803f58e547637100e83bb6bab2843fe0">Add Handler for MetaPoint Read</a></p>
+<p>Example: <a href=https://git.libreoffice.org/core/+/c23b42ce803f58e547637100e83bb6bab2843fe0>Add Handler for MetaPoint Read</a></p>
 <ul>
 <li>Create the PointHandler</li>
 <li>Create Set methods for MetaPointAction private members, as they are required by the PointHandler</li>
 <li>Adjust the MetaActionHandler to call the PointHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Read</li>
 </ul>
 <p><strong>Phase Three (merged)</strong>
-The commits regarding this phase start from <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=5e020c43668c9e11188ba48bf57de4bd7e9cc501">Create SvmWriter class</a> and end at <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=a129b138043ee167f1043725f5d918bb8535a292">Add Handler for TextLineColor Write</a></p>
-<p>Example: <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=5e020c43668c9e11188ba48bf57de4bd7e9cc501">Create SvmWriter class</a></p>
+The commits regarding this phase start from <a href=https://git.libreoffice.org/core/+/5e020c43668c9e11188ba48bf57de4bd7e9cc501>Create SvmWriter class</a> and end at <a href=https://git.libreoffice.org/core/+/a129b138043ee167f1043725f5d918bb8535a292>Add Handler for TextLineColor Write</a></p>
+<p>Example: <a href=https://git.libreoffice.org/core/+/5e020c43668c9e11188ba48bf57de4bd7e9cc501>Create SvmWriter class</a></p>
 <ul>
 <li>Create the required files for a new class and update the appropriate makefile</li>
 <li>Create a constructor</li>
@@ -148,7 +150,7 @@ The commits regarding this phase start from <a href="https://cgit.freedesktop.or
 <li>Create the Write method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Write) for all actions except MetaAction. The next commits continue replacing with the new one.</li>
 <li>Update svmtest.cxx in order to use SvmWriter::Write instead of GDIMetaFile::Write</li>
 </ul>
-<p>Example: <a href="https://cgit.freedesktop.org/libreoffice/core/commit/?id=76b619cca484fb681a8f3c175337fda3aabe3c0f">Add Handler for Ellipse Write</a></p>
+<p>Example: <a href=https://git.libreoffice.org/core/+/76b619cca484fb681a8f3c175337fda3aabe3c0f>Add Handler for Ellipse Write</a></p>
 <ul>
 <li>Create the EllipseHandler</li>
 <li>Adjust the MetaActionHandler to call the EllipseHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Write</li>
@@ -157,10 +159,51 @@ The commits regarding this phase start from <a href="https://cgit.freedesktop.or
 The commits regarding this phase start with “Replace”</p>
 <p>Example: <a href=https://git.libreoffice.org/core/+/be710c72a6302829bf7f632c8ad6dc72be51fd95>Replace ReadGDIMetaFile with Svmreader::Read</a></p>
 <ul>
-<li>Removes the old method call</li>
-<li>Creates a SvmReader object and calls SvmReader::Read, thus replacing the old Read with the new
-<strong>Note</strong>: These steps are repeated for each file that needs replacing</li>
+<li>
+<p>Removes the old method call</p>
+</li>
+<li>
+<p>Creates a SvmReader object and calls SvmReader::Read, thus replacing the old Read with the new</p>
+<p><strong>Note</strong>: These steps are repeated for each file that needs replacing</p>
+</li>
 </ul>
+<p><strong>Phase Five (not merged)</strong>
+The commits regarding this phase start with &ldquo;Remove&rdquo;. It also includes the commit <a href=https://gerrit.libreoffice.org/c/core/+/120414>Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum</a></p>
+<p>Example: <a href=https://gerrit.libreoffice.org/c/core/+/120409>Remove unused methods from gdimtf.hxx</a></p>
+<ul>
+<li>
+<p>Removes GDIMetaFile::Read</p>
+</li>
+<li>
+<p>Removes GDIMetaFile::Write</p>
+</li>
+<li>
+<p>Removes ReadGDIMetaFile</p>
+</li>
+<li>
+<p>Removes WriteGDIMetaFile</p>
+<p><strong>Note:</strong> This can be done, as the functionality of the removed methods is covered by SvmReader, SvmWriter.</p>
+</li>
+</ul>
+<p>Example: <a href=https://gerrit.libreoffice.org/c/core/+/120414>Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum</a></p>
+<ul>
+<li>
+<p>Moves the method to SvmWriter while applying any changes needed in order to be compatible</p>
+</li>
+<li>
+<p>Removes the method from it&rsquo;s initial location</p>
+<p><strong>Note:</strong> This change was required as the method was using MetaAction::Write, which is replaced by the SvmWriter.</p>
+</li>
+</ul>
+<h3 id=next-steps>Next Steps<a hidden class=anchor aria-hidden=true href=#next-steps>#</a></h3>
+<p>The remaining steps for the completion of the project are the following:</p>
+<ul>
+<li>Merge the current online patches on gerrit and make small changes if needed</li>
+<li>Go through the tests of the svm format trying to find edge</li>
+</ul>
+<p>Those steps do not need to be implemented by someone else however as I am determined to see this project to the end, even if it it goes beyond the GSoC Coding period.</p>
+<h3 id=conclusion>Conclusion<a hidden class=anchor aria-hidden=true href=#conclusion>#</a></h3>
+<p>Working at LibreOffice was a beautiful experience. Getting in touch with people all over the world while aiming at the same goal was something new for me, but definitely something I will seek in the future! I would also like to thank the dev community for it&rsquo;s constant support on all my questions (silly or not) and especially my mentors Tomaž Vajngerl, Miklos Vajna for their continuous support as without them I would not be able to progress. Lastly, as I had a great experience, I plan to continue contributing to LibreOffice in the feature! Sere you all around!</p>
 </div>
 <footer class=post-footer>
 <ul class=post-tags>
@@ -168,8 +211,8 @@ The commits regarding this phase start with “Replace”</p>
 <li><a href=https://panoskorovesis.github.io/tags/libreoffice/>LibreOffice</a></li>
 </ul>
 <nav class=paginav>
-<a class=prev href=https://panoskorovesis.github.io/posts/first-post/>
-<span class=title>« Prev Page</span>
+<a class=next href=https://panoskorovesis.github.io/posts/first-post/>
+<span class=title>Next Page »</span>
 <br>
 <span>Welcome</span>
 </a>
