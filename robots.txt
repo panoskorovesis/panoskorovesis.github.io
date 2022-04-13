@@ -1,3 +1,1 @@
 User-agent: *
-Disallow:
-Sitemap: https://panoskorovesis.github.io/sitemap.xml
