@@ -20,6 +20,6 @@ Content you might see:
 - Fun projects
 - Interesting assignments
 - Open source weekly progress updates
-- Many more that I haven't thought about yet!
+- Many more that I haven't thought about yet
 
 Thanks for reading!
