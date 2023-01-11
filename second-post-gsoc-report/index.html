@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Google Summer of Code 2021 Paper - Yet another blog 😯</title><meta name="Description" content="The work I have done this summer for LibreOffice is summarized here"><meta property="og:title" content="Google Summer of Code 2021 Paper" />
+<meta property="og:description" content="The work I have done this summer for LibreOffice is summarized here" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://panoskorovesis.github.io/second-post-gsoc-report/" /><meta property="og:image" content="https://panoskorovesis.github.io/images/avatar.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-22T11:30:03+00:00" />
+<meta property="article:modified_time" content="2021-08-22T11:30:03+00:00" /><meta property="og:site_name" content="Yet another blog 😯" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://panoskorovesis.github.io/images/avatar.webp"/>
+
+<meta name="twitter:title" content="Google Summer of Code 2021 Paper"/>
+<meta name="twitter:description" content="The work I have done this summer for LibreOffice is summarized here"/>
+<meta name="application-name" content="Yet another blog 😯">
+<meta name="apple-mobile-web-app-title" content="Yet another blog 😯">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://panoskorovesis.github.io/second-post-gsoc-report/" /><link rel="prev" href="https://panoskorovesis.github.io/first-post/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Google Summer of Code 2021 Paper",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/panoskorovesis.github.io\/second-post-gsoc-report\/"
+        },"image": ["https:\/\/panoskorovesis.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "GSoC, LibreOffice","wordcount":  1234 ,
+        "url": "https:\/\/panoskorovesis.github.io\/second-post-gsoc-report\/","datePublished": "2021-08-22T11:30:03+00:00","dateModified": "2021-08-22T11:30:03+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/panoskorovesis.github.io\/images\/avatar.webp",
+                    "width":  512 ,
+                    "height":  512 
+                }},"author": {
+                "@type": "Person",
+                "name": "Panos Korovesis"
+            },"description": "The work I have done this summer for LibreOffice is summarized here"
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Yet another blog 😯"><span class="header-title-pre"><i class='far fa-edit fa-fw'></i></span><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="https://github.com/panoskorovesis" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="Switch Theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="black">Black</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Yet another blog 😯"><span class="header-title-pre"><i class='far fa-edit fa-fw'></i></span><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="https://github.com/panoskorovesis" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="#" onclick="return false;" class="menu-item theme-select" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="Switch Theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="black">Black</option>
+                    <option value="auto">Auto</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#google-summer-of-code-2021-work-product-submission">Google Summer of Code 2021 Work Product Submission</a>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#technical-overview">Technical Overview</a></li>
+        <li><a href="#commits">Commits</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#commit-list">Commit List</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Google Summer of Code 2021 Paper</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://github.com/panoskorovesis" title="Author" target="_blank" rel="noopener noreferrer author" class="author">Panos Korovesis</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/paper/"><i class="far fa-folder fa-fw"></i>Paper</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="Sunday, Aug 22, 2021">Sunday, Aug 22, 2021</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="Sunday, Aug 22, 2021">Sunday, Aug 22, 2021</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1234 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;<span id="/second-post-gsoc-report/" class="leancloud_visitors" data-flag-title="Google Summer of Code 2021 Paper">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count" id=twikoo_visitors></span>&nbsp;views
+                    </span>&nbsp;<span id="/second-post-gsoc-report/" class="comment_count" data-flag-title="Google Summer of Code 2021 Paper">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count" id="twikoo-comment-count"></span>&nbsp;comments
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        data-src="images/code.jpeg"
+        data-srcset="/images/code.jpeg, images/code.jpeg 1.5x, /images/code.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/code.jpeg"
+        title="The work I have done this summer for LibreOffice is summarized here" height="auto" width="auto"></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#google-summer-of-code-2021-work-product-submission">Google Summer of Code 2021 Work Product Submission</a>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#technical-overview">Technical Overview</a></li>
+        <li><a href="#commits">Commits</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#commit-list">Commit List</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="google-summer-of-code-2021-work-product-submission" class="headerLink">
+    <a href="#google-summer-of-code-2021-work-product-submission" class="header-mark"></a>1 Google Summer of Code 2021 Work Product Submission</h2><h3 id="introduction" class="headerLink">
+    <a href="#introduction" class="header-mark"></a>1.1 Introduction</h3><p>Hello, my name is Panos Korovesis and during 2021 I was accepted in the Google Summer of Code program. I chose a <a href="https://summerofcode.withgoogle.com/projects/#5587183802515456" target="_blank" rel="noopener noreferrer">project</a> from <strong>LibreOffice</strong> and I worked under the mentorship of <strong>Tomaž Vajngerl and Miklos Vajna</strong>. The objective of the project was to complete the missing import/export tests of the SVM format and then separate the writing/reading functionality of the VCL Metafile to its own classes, in order to allow further refactoring of the VCL.</p>
+<h3 id="technical-overview" class="headerLink">
+    <a href="#technical-overview" class="header-mark"></a>1.2 Technical Overview</h3><p>This project can be broken down in five distinct phases.</p>
+<ul>
+<li><strong>Phase One - Missing SVM Tests</strong>: This part included the completion of the commented out methods in <a href="https://opengrok.libreoffice.org/xref/core/vcl/qa/cppunit/svm/svmtest.cxx?r=41ac0abb" target="_blank" rel="noopener noreferrer">svmtest.cxx</a>. In some cases additions were required in <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/gdi/mtfxmldump.cxx?r=8689bd54" target="_blank" rel="noopener noreferrer">mtfxmldump.cxx</a> in order for the svm file to be produced.</li>
+<li><strong>Phase Two - SvmReader</strong>: This part included the creation of a new class <a href="https://opengrok.libreoffice.org/xref/core/include/vcl/filter/SvmReader.hxx?r=a66dc788" target="_blank" rel="noopener noreferrer">SvmReader.hxx</a> in order to handle the reading functionality of the VCL. Reading is done with <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmReader.cxx?r=6189a79c#62" target="_blank" rel="noopener noreferrer">SvmReader::Read</a> method, which works as follows:
+<ul>
+<li>Sets up the stream, as was previously done in <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/gdi/gdimtf.cxx?r=692c5df1#2639" target="_blank" rel="noopener noreferrer">ReadGDIMetaFile</a></li>
+<li>For each MetaAction call the created MetaActionHandler</li>
+<li>The MetaActionHandler calls the appropriate read handler - which performs the reading - (e.g <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmReader.cxx?r=6189a79c#401" target="_blank" rel="noopener noreferrer">PixelHandler</a>)  for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Read methods.
+<strong>Note</strong>: In order for the read handlers to work, Set methods had to be created for each MetaAct’s protected members (one can be seen <a href="https://opengrok.libreoffice.org/xref/core/include/vcl/metaact.hxx?r=8ede3362#361" target="_blank" rel="noopener noreferrer">here</a>).</li>
+</ul>
+</li>
+<li><strong>Phase Three - SvmWriter</strong>: This part included the creation of a new class SvmWriter.hxx in order to handle the writing functionality of the VCL. Writing is done with SvmWriter::Write method, which works as follows:
+<ul>
+<li>Sets up the stream, as was previously done in <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/gdi/gdimtf.cxx?r=692c5df1#2740" target="_blank" rel="noopener noreferrer">GDIMetaFile::Write</a></li>
+<li>For each MetaAction in the MetaFile, call the created MetaActionHandler</li>
+<li>The MetaActionHandler calls the appropriate write handler - which performs the writing - (e.g <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmWriter.cxx?r=7ddf7375#448" target="_blank" rel="noopener noreferrer">PointHandler</a>) for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Write methods.</li>
+</ul>
+</li>
+<li><strong>Phase Four - Replacing</strong>: The reading/writing was performed by four methods. Those are: GDIMetaFile::Read, GDIMetaFile::Write, ReadGDIMetaFile, WriteGDIMetaFile. Whereas the new functionality is performed by SvmWriter::Write and SvmReader::Read. This part included the replacement of the method calls of the methods mentioned above with the new ones (<a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmWriter.cxx?r=7ddf7375#38" target="_blank" rel="noopener noreferrer">SvmWriter::Write</a>, <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmReader.cxx?r=6189a79c#62" target="_blank" rel="noopener noreferrer">SvmReader::Read</a>)
+<strong>Note</strong>: GDIMetaFile::GetChecksum had to be moved in SvmWriter because it was using the MetaAction::Write method.</li>
+<li><strong>Phase Five - Cleanup</strong>: This part included the deletion of methods that were no longer in use. Those were:
+<ul>
+<li>GDIMetaFile::Write</li>
+<li>GDIMetaFile::Read</li>
+<li>WriteGDIMetaFile</li>
+<li>ReadGDIMetaFile</li>
+<li>MetaAction::Write</li>
+<li>MetaAction::Read</li>
+<li>GDIMetaFile::GetChecksum</li>
+</ul>
+</li>
+</ul>
+<h3 id="commits" class="headerLink">
+    <a href="#commits" class="header-mark"></a>1.3 Commits</h3><p>A list with all the commits can be found at the <a href="#commit-list" rel="">bottom of this post</a></p>
+<p>Some <strong>important commits</strong> for each phase are listed below:</p>
+<p><strong>Phase One</strong>
+The commits regarding this phase start from <a href="https://gerrit.libreoffice.org/c/core/&#43;/116780" target="_blank" rel="noopener noreferrer">Add RefPoint cppunit test to vcl</a> and end at <a href="https://gerrit.libreoffice.org/c/core/&#43;/117694" target="_blank" rel="noopener noreferrer">Add FloatTransparent cppunit test to vcl</a>.</p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/117245" target="_blank" rel="noopener noreferrer">Add Comment cppunit test to vcl</a></p>
+<ul>
+<li>Fill the TestComment method with the required elements to be tested. They are then written in a .svm file in xml format</li>
+<li>Create a CheckComment method, which checks if the Comment attributes declared in the method above are the expected in the xml</li>
+<li>Modify mtfxmldump.cxx to format the xml output in the format we need</li>
+</ul>
+<p><strong>Phase Two</strong>
+The commits regarding this phase start from <a href="https://gerrit.libreoffice.org/c/core/&#43;/118143" target="_blank" rel="noopener noreferrer">Create Separate SvmReader class</a> and end at <a href="https://gerrit.libreoffice.org/c/core/&#43;/119539" target="_blank" rel="noopener noreferrer">Add Handler for MetaAction Read</a>.</p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/118143" target="_blank" rel="noopener noreferrer">Create Separate SvmReader class</a></p>
+<ul>
+<li>Create the required files for a new class and update the appropriate makefile</li>
+<li>Create a constructor</li>
+<li>Create the Read method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Read). The next commits start replacing it with the new one.</li>
+<li>Update svmtest.cxx in order to use SvmReader::Read instead of GDIMetaFile::Read</li>
+</ul>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/118398" target="_blank" rel="noopener noreferrer">Add Handler for MetaPoint Read</a></p>
+<ul>
+<li>Create the PointHandler</li>
+<li>Create Set methods for MetaPointAction private members, as they are required by the PointHandler</li>
+<li>Adjust the MetaActionHandler to call the PointHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Read</li>
+</ul>
+<p><strong>Phase Three</strong>
+The commits regarding this phase start from <a href="https://gerrit.libreoffice.org/c/core/&#43;/119541" target="_blank" rel="noopener noreferrer">Create SvmWriter class</a> and end at <a href="https://gerrit.libreoffice.org/c/core/&#43;/120372" target="_blank" rel="noopener noreferrer">Add Handler for TextLineColor Write</a></p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/119541" target="_blank" rel="noopener noreferrer">Create SvmWriter class</a></p>
+<ul>
+<li>Create the required files for a new class and update the appropriate makefile</li>
+<li>Create a constructor</li>
+<li>Create the MetaActionHandler and the ActionHandler which replaces MetaAction::Write.</li>
+<li>Create the Write method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Write) for all actions except MetaAction. The next commits continue replacing with the new one.</li>
+<li>Update svmtest.cxx in order to use SvmWriter::Write instead of GDIMetaFile::Write</li>
+</ul>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/119733" target="_blank" rel="noopener noreferrer">Add Handler for Ellipse Write</a></p>
+<ul>
+<li>Create the EllipseHandler</li>
+<li>Adjust the MetaActionHandler to call the EllipseHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Write</li>
+</ul>
+<p><strong>Phase Four</strong>
+The commits regarding this phase start with “Replace”</p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/120376" target="_blank" rel="noopener noreferrer">Replace ReadGDIMetaFile with Svmreader::Read</a></p>
+<ul>
+<li>
+<p>Removes the old method call</p>
+</li>
+<li>
+<p>Creates a SvmReader object and calls SvmReader::Read, thus replacing the old Read with the new</p>
+<p><strong>Note</strong>: These steps are repeated for each file that needs replacing</p>
+</li>
+</ul>
+<p><strong>Phase Five</strong>
+The commits regarding this phase start with &ldquo;Remove&rdquo;. It also includes the commit <a href="https://gerrit.libreoffice.org/c/core/&#43;/120414" target="_blank" rel="noopener noreferrer">Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum</a></p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/120409" target="_blank" rel="noopener noreferrer">Remove unused methods from gdimtf.hxx</a></p>
+<ul>
+<li>
+<p>Removes GDIMetaFile::Read</p>
+</li>
+<li>
+<p>Removes GDIMetaFile::Write</p>
+</li>
+<li>
+<p>Removes ReadGDIMetaFile</p>
+</li>
+<li>
+<p>Removes WriteGDIMetaFile</p>
+<p><strong>Note:</strong> This can be done, as the functionality of the removed methods is covered by SvmReader, SvmWriter.</p>
+</li>
+</ul>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/120414" target="_blank" rel="noopener noreferrer">Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum</a></p>
+<ul>
+<li>
+<p>Moves the method to SvmWriter while applying any changes needed in order to be compatible</p>
+</li>
+<li>
+<p>Removes the method from it&rsquo;s initial location</p>
+<p><strong>Note:</strong> This change was required as the method was using MetaAction::Write, which is replaced by the SvmWriter.</p>
+</li>
+</ul>
+<h3 id="next-steps" class="headerLink">
+    <a href="#next-steps" class="header-mark"></a>1.4 Next Steps</h3><p>The remaining steps for the completion of the project are</p>
+<ul>
+<li>Go through the tests of the svm format trying to find edge cases and if so, write tests for them</li>
+</ul>
+<p>Those steps do not need to be implemented by someone else however as I am determined to see this project to the end, even if it it goes beyond the GSoC Coding period.</p>
+<h3 id="conclusion" class="headerLink">
+    <a href="#conclusion" class="header-mark"></a>1.5 Conclusion</h3><p>Working at LibreOffice was a beautiful experience. Getting in touch with people all over the world while aiming at the same goal was something new for me, but definitely something I will seek in the future! I would also like to thank the dev community for it&rsquo;s constant support on all my questions (silly or not) and especially my mentors Tomaž Vajngerl, Miklos Vajna for their continuous support as without them I would not be able to progress. Lastly, as I had a great experience, I plan to continue contributing to LibreOffice in the feature! Sere you all around!</p>
+<h3 id="commit-list" class="headerLink">
+    <a href="#commit-list" class="header-mark"></a>1.6 Commit List</h3><p>All the commits regarding the project and thus listed below, have been <strong>successfully merged</strong>.</p>
+<p>The commits are:</p>
+<ol>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116780" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/116780</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116819" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/116819</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116967" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/116967</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116959" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/116959</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117153" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117153</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117232" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117232</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117245" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117245</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117155" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117155</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117368" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117368</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117575" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117575</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117702" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117702</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117694" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/117694</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118143" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118143</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118275" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118275</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118217" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118217</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118396" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118396</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118398" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118398</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118399" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118399</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118403" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118403</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118433" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118433</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118473" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118473</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118545" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118545</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118550" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118550</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118565" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118565</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118566" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118566</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118598" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118598</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118608" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118608</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118610" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118610</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118633" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118633</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118636" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118636</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118637" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118637</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118653" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118653</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118665" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118665</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118667" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118667</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118672" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118672</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118673" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118673</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118674" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118674</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118677" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118677</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118698" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118698</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118829" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118829</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118833" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118833</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118834" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118834</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118836" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118836</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118830" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118830</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118837" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118837</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118845" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118845</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118892" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118892</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118894" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118894</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118895" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118895</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118896" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118896</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118955" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118955</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118956" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118956</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118957" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118957</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118967" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118967</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118968" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118968</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118979" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118979</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118980" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118980</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118981" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/118981</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119092" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119092</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119170" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119170</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119171" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119171</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119192" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119192</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119193" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119193</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119194" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119194</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119537" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119537</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119538" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119538</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119539" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119539</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119541" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119541</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119580" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119580</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119591" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119591</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119592" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119592</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119593" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119593</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119594" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119594</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119733" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119733</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119734" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119734</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119735" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119735</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119736" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119736</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119737" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119737</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119738" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119738</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119846" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119846</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119898" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119898</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119899" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119899</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119900" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119900</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119901" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119901</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119902" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119902</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119903" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119903</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119920" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119920</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119921" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119921</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119922" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119922</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119923" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119923</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119924" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119924</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119925" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119925</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119963" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119963</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119964" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119964</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119965" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119965</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119966" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119966</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119967" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119967</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119968" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/119968</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120106" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120106</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120107" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120107</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120108" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120108</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120109" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120109</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120110" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120110</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120111" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120111</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120153" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120153</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120154" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120154</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120155" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120155</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120156" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120156</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120157" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120157</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120158" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120158</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120256" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120256</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120257" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120257</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120258" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120258</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120259" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120259</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120263" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120263</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120264" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120264</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120306" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120306</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120307" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120307</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120308" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120308</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120309" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120309</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120312" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120312</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120313" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120313</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120349" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120349</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120350" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120350</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120351" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120351</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120372" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120372</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120376" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120376</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120408" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120408</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120409" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120409</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120414" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120414</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120471" target="_blank" rel="noopener noreferrer">https://gerrit.libreoffice.org/c/core/+/120471</a></li>
+</ol>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on Sunday, Aug 22, 2021</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/gsoc/">GSoC</a>,&nbsp;<a href="/tags/libreoffice/">LibreOffice</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/first-post/" class="prev" rel="prev" title="Welcome"><i class="fas fa-angle-left fa-fw"></i>Welcome</a></div>
+</div>
+<div id="comments"><div id="twikoo"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.109.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/panoskorovesis" target="_blank" rel="noopener noreferrer">Panos Korovesis</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo-comments-doit.vercel.app/","lang":"en"}},"data":{"desktop-header-typeit":"Yet another blog 😯","mobile-header-typeit":"Yet another blog 😯"},"search":{"algoliaAppID":"5YGRNRQK1G","algoliaIndex":"en_index","algoliaSearchKey":"0ff6874805de24b84aa1d5ebccad56cd","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":300,"type":"algolia"},"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script></div>
+</body>
+
+</html>

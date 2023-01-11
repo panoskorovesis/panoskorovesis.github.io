@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Yet another blog 😯</title>
-    <link>https://panoskorovesis.github.io/</link>
-    <description>Recent content on Yet another blog 😯</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 22 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Google Summer of Code 2021 Paper</title>
-      <link>https://panoskorovesis.github.io/posts/second-post-gsoc-report/</link>
-      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/posts/second-post-gsoc-report/</guid>
-      <description>The work I have done this summer for LibreOffice is summarized here</description>
-    </item>
-    
-    <item>
-      <title>Welcome</title>
-      <link>https://panoskorovesis.github.io/posts/first-post/</link>
-      <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/posts/first-post/</guid>
-      <description>Some information about me and the blog</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Yet another blog 😯</title>
+        <link>https://panoskorovesis.github.io/</link>
+        <description>My tech / bio blog!</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+            <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 22 Aug 2021 11:30:03 &#43;0000</lastBuildDate>
+            <atom:link href="https://panoskorovesis.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Google Summer of Code 2021 Paper</title>
+    <link>https://panoskorovesis.github.io/second-post-gsoc-report/</link>
+    <pubDate>Sun, 22 Aug 2021 11:30:03 &#43;0000</pubDate><author>
+        <name>Panos Korovesis</name>
+    </author><guid>https://panoskorovesis.github.io/second-post-gsoc-report/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="images/code.jpeg" referrerpolicy="no-referrer">
+            </div>The work I have done this summer for LibreOffice is summarized here]]></description>
+</item><item>
+    <title>Welcome</title>
+    <link>https://panoskorovesis.github.io/first-post/</link>
+    <pubDate>Thu, 05 Aug 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>Panos Korovesis</name>
+    </author><guid>https://panoskorovesis.github.io/first-post/</guid>
+    <description><![CDATA[A few words about me]]></description>
+</item></channel>
 </rss>
