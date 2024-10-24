@@ -1,15 +1,23 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>aboutme - Tag - Yet another blog 😯</title>
-        <link>https://panoskorovesis.github.io/tags/aboutme/</link>
-        <description>aboutme - Tag - Yet another blog 😯</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
-            <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 05 Aug 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/tags/aboutme/" rel="self" type="application/rss+xml" /><item>
-    <title>Welcome</title>
-    <link>https://panoskorovesis.github.io/welcome-post/</link>
-    <pubDate>Thu, 05 Aug 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>Panos Korovesis</name>
-    </author><guid>https://panoskorovesis.github.io/welcome-post/</guid>
-    <description><![CDATA[A few words about me]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aboutme on Yet another blog 😯</title>
+    <link>https://panoskorovesis.github.io/tags/aboutme/</link>
+    <description>Recent content in aboutme on Yet another blog 😯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+    <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 05 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>https://panoskorovesis.github.io/welcome-post/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://panoskorovesis.github.io/welcome-post/</guid>
+      <description>A few words about me</description>
+    </item>
+    
+  </channel>
 </rss>
