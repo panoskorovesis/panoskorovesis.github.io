@@ -1,36 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Yet another blog 😯</title>
-    <link>https://panoskorovesis.github.io/tags/</link>
-    <description>Recent content in Tags on Yet another blog 😯</description>
+    <title>Tags on The Space 🌍</title>
+    <link>https://example.org/tags/</link>
+    <description>Recent content in Tags on The Space 🌍</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 22 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+    <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
+    <copyright>© 2024 Panos Korovesis</copyright>
+    <lastBuildDate>Sat, 26 Oct 2024 19:22:03 +0000</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GSoC</title>
-      <link>https://panoskorovesis.github.io/tags/gsoc/</link>
-      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/tags/gsoc/</guid>
+      <title>Docker</title>
+      <link>https://example.org/tags/docker/</link>
+      <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/tags/docker/</guid>
       <description></description>
+      
     </item>
     
     <item>
-      <title>LibreOffice</title>
-      <link>https://panoskorovesis.github.io/tags/libreoffice/</link>
-      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/tags/libreoffice/</guid>
+      <title>Ollama</title>
+      <link>https://example.org/tags/ollama/</link>
+      <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/tags/ollama/</guid>
       <description></description>
+      
     </item>
     
     <item>
-      <title>aboutme</title>
-      <link>https://panoskorovesis.github.io/tags/aboutme/</link>
-      <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/tags/aboutme/</guid>
+      <title>C&#43;&#43;</title>
+      <link>https://example.org/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/tags/c&#43;&#43;/</guid>
       <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Thoughts</title>
+      <link>https://example.org/tags/thoughts/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/tags/thoughts/</guid>
+      <description></description>
+      
     </item>
     
   </channel>

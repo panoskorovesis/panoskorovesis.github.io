@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on The Space 🌍</title>
+    <link>https://example.org/series/</link>
+    <description>Recent content in Series on The Space 🌍</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+    <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
+    <copyright>© 2024 Panos Korovesis</copyright>
+    <atom:link href="https://example.org/series/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

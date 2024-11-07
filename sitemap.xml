@@ -1,68 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>https://panoskorovesis.github.io/categories/</loc>
-    <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://example.org/</loc>
+    <lastmod>2024-10-26T19:22:03+00:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/second-post-gsoc-report/</loc>
-    <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://example.org/posts/</loc>
+    <lastmod>2024-10-26T19:22:03+00:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/tags/gsoc/</loc>
-    <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://example.org/posts/infrastructure/ollama_server/</loc>
+    <lastmod>2024-10-26T19:22:03+00:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/tags/libreoffice/</loc>
+  </url>
+  <url>
+    <loc>https://example.org/posts/gsoc/</loc>
     <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/categories/paper/</loc>
-    <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/posts/</loc>
-    <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/tags/</loc>
-    <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/</loc>
-    <lastmod>2021-08-22T11:30:03+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/tags/aboutme/</loc>
+  </url>
+  <url>
+    <loc>https://example.org/posts/welcome/</loc>
     <lastmod>2021-08-05T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/categories/aboutme/</loc>
-    <lastmod>2021-08-05T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/welcome-post/</loc>
-    <lastmod>2021-08-05T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/authors/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://panoskorovesis.github.io/series/</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>

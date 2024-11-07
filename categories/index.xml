@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Yet another blog 😯</title>
-    <link>https://panoskorovesis.github.io/categories/</link>
-    <description>Recent content in Categories on Yet another blog 😯</description>
+    <title>Categories on The Space 🌍</title>
+    <link>https://example.org/categories/</link>
+    <description>Recent content in Categories on The Space 🌍</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 22 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+    <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
+    <copyright>© 2024 Panos Korovesis</copyright>
+    <lastBuildDate>Sat, 26 Oct 2024 19:22:03 +0000</lastBuildDate><atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Paper</title>
-      <link>https://panoskorovesis.github.io/categories/paper/</link>
-      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/categories/paper/</guid>
+      <title>Infrastructure</title>
+      <link>https://example.org/categories/infrastructure/</link>
+      <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/categories/infrastructure/</guid>
       <description></description>
+      
     </item>
     
     <item>
-      <title>aboutme</title>
-      <link>https://panoskorovesis.github.io/categories/aboutme/</link>
-      <pubDate>Thu, 05 Aug 2021 11:30:03 +0000</pubDate>
-      
-      <guid>https://panoskorovesis.github.io/categories/aboutme/</guid>
+      <title>GSoC</title>
+      <link>https://example.org/categories/gsoc/</link>
+      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/categories/gsoc/</guid>
       <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LibreOffice</title>
+      <link>https://example.org/categories/libreoffice/</link>
+      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/categories/libreoffice/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Aboutme</title>
+      <link>https://example.org/categories/aboutme/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/categories/aboutme/</guid>
+      <description></description>
+      
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on The Space 🌍</title>
+    <link>https://example.org/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on The Space 🌍</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+    <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
+    <copyright>© 2024 Panos Korovesis</copyright>
+    <lastBuildDate>Sun, 22 Aug 2021 11:30:03 +0000</lastBuildDate><atom:link href="https://example.org/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2021 Paper</title>
+      <link>https://example.org/posts/gsoc/</link>
+      <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/posts/gsoc/</guid>
+      <description>The work I have done this summer for LibreOffice is summarized here</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://example.org/posts/gsoc/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

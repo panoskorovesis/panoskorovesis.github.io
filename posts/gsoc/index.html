@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Google Summer of Code 2021 Paper &middot; The Space 🌍</title>
+  <meta name="title" content="Google Summer of Code 2021 Paper &middot; The Space 🌍" />
+  
+  <meta name="description" content="The work I have done this summer for LibreOffice is summarized here" />
+  <meta name="keywords" content="C&#43;&#43;, " />
+  
+  
+  <link rel="canonical" href="https://example.org/posts/gsoc/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.4613b32844bf528b63ccb22a36706c668ee556ae01fe45d02a9b1d274b77ec6b4ebf2fcb0cdc8db19d9861216b1bcf4c1c069779f87b6fd25479ee5838f13228.css"
+    integrity="sha512-RhOzKES/UotjzLIqNnBsZo7lVq4B/kXQKpsdJ0t37GtOvy/LDNyNsZ2YYSFrG89MHAaXefh7b9JUee5YOPEyKA==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.efbf3b6b987689fffaf2d7b73173d2690c0279a04d444b0537a77d7f4ff6e6d493445400cb0cf56bc0f0f123e19f15394e63cae34e67f069bd013dd5c73df56e.js"
+    integrity="sha512-7787a5h2if/68te3MXPSaQwCeaBNREsFN6d9f0/25tSTRFQAywz1a8Dw8SPhnxU5TmPK405n8Gm9AT3Vxz31bg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://example.org/posts/gsoc/">
+  <meta property="og:site_name" content="The Space 🌍">
+  <meta property="og:title" content="Google Summer of Code 2021 Paper">
+  <meta property="og:description" content="The work I have done this summer for LibreOffice is summarized here">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-08-22T11:30:03+00:00">
+    <meta property="article:modified_time" content="2021-08-22T11:30:03+00:00">
+    <meta property="article:tag" content="C&#43;&#43;">
+    <meta property="og:image" content="https://example.org/posts/gsoc/featured.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://example.org/posts/gsoc/featured.png"><meta name="twitter:title" content="Google Summer of Code 2021 Paper">
+<meta name="twitter:description" content="The work I have done this summer for LibreOffice is summarized here">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Google Summer of Code 2021 Paper",
+    "headline": "Google Summer of Code 2021 Paper",
+    "description": "The work I have done this summer for LibreOffice is summarized here",
+    "abstract": "The work I have done this summer for LibreOffice is summarized here",
+    "inLanguage": "en",
+    "url" : "https:\/\/example.org\/posts\/gsoc\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Panos Korovesis"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-08-22T11:30:03\u002b00:00",
+    "datePublished": "2021-08-22T11:30:03\u002b00:00",
+    
+    "dateModified": "2021-08-22T11:30:03\u002b00:00",
+    
+    "keywords": ["C++"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1240"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Panos Korovesis" />
+  
+  
+  
+  <link href="https://github.com/panoskorovesis" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">The Space 🌍</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Posts 📜
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Categories
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Tags
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="https://github.com/panoskorovesis/panoskorovesis.github.io"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <span  class="mr-1" >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium" title="">
+        GitHub
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Posts 📜
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Categories
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Tags
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://github.com/panoskorovesis/panoskorovesis.github.io"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <div  class="mr-2" >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg" title="">
+            GitHub
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/posts/gsoc/featured_hued7741b511b1bd3dc6b75c30283ed384_536668_1200x0_resize_box_3.png);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      Google Summer of Code 2021 Paper
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2021-08-22T11:30:03&#43;00:00">22 August 2021</time><span class="px-2 text-primary-500">&middot;</span><span>1240 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="Panos Korovesis" src="/50746067_1613053876081025198_hua4c99722f98a848334b3982824703fa3_30278_192x192_fill_q75_box_center.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Panos Korovesis
+    </div>
+    
+    
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">Data Engineer at BIG DATA LAB, Msc Data Science</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/panoskorovesis"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#google-summer-of-code-2021-work-product-submission">Google Summer of Code 2021 Work Product Submission</a>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#technical-overview">Technical Overview</a></li>
+        <li><a href="#commits">Commits</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#commit-list">Commit List</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#google-summer-of-code-2021-work-product-submission">Google Summer of Code 2021 Work Product Submission</a>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#technical-overview">Technical Overview</a></li>
+        <li><a href="#commits">Commits</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#commit-list">Commit List</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">Google Summer of Code 2021 Work Product Submission 
+    <div id="google-summer-of-code-2021-work-product-submission" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#google-summer-of-code-2021-work-product-submission" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Introduction 
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#introduction" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Hello, my name is Panos Korovesis and during 2021 I was accepted in the Google Summer of Code program. I chose a <a href="https://summerofcode.withgoogle.com/projects/#5587183802515456" target="_blank">project</a> from <strong>LibreOffice</strong> and I worked under the mentorship of <strong>Tomaž Vajngerl and Miklos Vajna</strong>. The objective of the project was to complete the missing import/export tests of the SVM format and then separate the writing/reading functionality of the VCL Metafile to its own classes, in order to allow further refactoring of the VCL.</p>
+
+
+<h3 class="relative group">Technical Overview 
+    <div id="technical-overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#technical-overview" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>This project can be broken down in five distinct phases.</p>
+<ul>
+<li><strong>Phase One - Missing SVM Tests</strong>: This part included the completion of the commented out methods in <a href="https://opengrok.libreoffice.org/xref/core/vcl/qa/cppunit/svm/svmtest.cxx?r=41ac0abb" target="_blank">svmtest.cxx</a>. In some cases additions were required in <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/gdi/mtfxmldump.cxx?r=8689bd54" target="_blank">mtfxmldump.cxx</a> in order for the svm file to be produced.</li>
+<li><strong>Phase Two - SvmReader</strong>: This part included the creation of a new class <a href="https://opengrok.libreoffice.org/xref/core/include/vcl/filter/SvmReader.hxx?r=a66dc788" target="_blank">SvmReader.hxx</a> in order to handle the reading functionality of the VCL. Reading is done with <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmReader.cxx?r=6189a79c#62" target="_blank">SvmReader::Read</a> method, which works as follows:
+<ul>
+<li>Sets up the stream, as was previously done in <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/gdi/gdimtf.cxx?r=692c5df1#2639" target="_blank">ReadGDIMetaFile</a></li>
+<li>For each MetaAction call the created MetaActionHandler</li>
+<li>The MetaActionHandler calls the appropriate read handler - which performs the reading - (e.g <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmReader.cxx?r=6189a79c#401" target="_blank">PixelHandler</a>)  for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Read methods.
+<strong>Note</strong>: In order for the read handlers to work, Set methods had to be created for each MetaAct’s protected members (one can be seen <a href="https://opengrok.libreoffice.org/xref/core/include/vcl/metaact.hxx?r=8ede3362#361" target="_blank">here</a>).</li>
+</ul>
+</li>
+<li><strong>Phase Three - SvmWriter</strong>: This part included the creation of a new class SvmWriter.hxx in order to handle the writing functionality of the VCL. Writing is done with SvmWriter::Write method, which works as follows:
+<ul>
+<li>Sets up the stream, as was previously done in <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/gdi/gdimtf.cxx?r=692c5df1#2740" target="_blank">GDIMetaFile::Write</a></li>
+<li>For each MetaAction in the MetaFile, call the created MetaActionHandler</li>
+<li>The MetaActionHandler calls the appropriate write handler - which performs the writing - (e.g <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmWriter.cxx?r=7ddf7375#448" target="_blank">PointHandler</a>) for each MetaAction depending on the MetaActionType. The handlers are modified versions of the MetaAction::Write methods.</li>
+</ul>
+</li>
+<li><strong>Phase Four - Replacing</strong>: The reading/writing was performed by four methods. Those are: GDIMetaFile::Read, GDIMetaFile::Write, ReadGDIMetaFile, WriteGDIMetaFile. Whereas the new functionality is performed by SvmWriter::Write and SvmReader::Read. This part included the replacement of the method calls of the methods mentioned above with the new ones (<a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmWriter.cxx?r=7ddf7375#38" target="_blank">SvmWriter::Write</a>, <a href="https://opengrok.libreoffice.org/xref/core/vcl/source/filter/svm/SvmReader.cxx?r=6189a79c#62" target="_blank">SvmReader::Read</a>)
+<strong>Note</strong>: GDIMetaFile::GetChecksum had to be moved in SvmWriter because it was using the MetaAction::Write method.</li>
+<li><strong>Phase Five - Cleanup</strong>: This part included the deletion of methods that were no longer in use. Those were:
+<ul>
+<li>GDIMetaFile::Write</li>
+<li>GDIMetaFile::Read</li>
+<li>WriteGDIMetaFile</li>
+<li>ReadGDIMetaFile</li>
+<li>MetaAction::Write</li>
+<li>MetaAction::Read</li>
+<li>GDIMetaFile::GetChecksum</li>
+</ul>
+</li>
+</ul>
+
+
+<h3 class="relative group">Commits 
+    <div id="commits" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#commits" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>A list with all the commits can be found at the <a href="#commit-list">bottom of this post</a></p>
+<p>Some <strong>important commits</strong> for each phase are listed below:</p>
+<p><strong>Phase One</strong>
+The commits regarding this phase start from <a href="https://gerrit.libreoffice.org/c/core/&#43;/116780" target="_blank">Add RefPoint cppunit test to vcl</a> and end at <a href="https://gerrit.libreoffice.org/c/core/&#43;/117694" target="_blank">Add FloatTransparent cppunit test to vcl</a>.</p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/117245" target="_blank">Add Comment cppunit test to vcl</a></p>
+<ul>
+<li>Fill the TestComment method with the required elements to be tested. They are then written in a .svm file in xml format</li>
+<li>Create a CheckComment method, which checks if the Comment attributes declared in the method above are the expected in the xml</li>
+<li>Modify mtfxmldump.cxx to format the xml output in the format we need</li>
+</ul>
+<p><strong>Phase Two</strong>
+The commits regarding this phase start from <a href="https://gerrit.libreoffice.org/c/core/&#43;/118143" target="_blank">Create Separate SvmReader class</a> and end at <a href="https://gerrit.libreoffice.org/c/core/&#43;/119539" target="_blank">Add Handler for MetaAction Read</a>.</p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/118143" target="_blank">Create Separate SvmReader class</a></p>
+<ul>
+<li>Create the required files for a new class and update the appropriate makefile</li>
+<li>Create a constructor</li>
+<li>Create the Read method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Read). The next commits start replacing it with the new one.</li>
+<li>Update svmtest.cxx in order to use SvmReader::Read instead of GDIMetaFile::Read</li>
+</ul>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/118398" target="_blank">Add Handler for MetaPoint Read</a></p>
+<ul>
+<li>Create the PointHandler</li>
+<li>Create Set methods for MetaPointAction private members, as they are required by the PointHandler</li>
+<li>Adjust the MetaActionHandler to call the PointHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Read</li>
+</ul>
+<p><strong>Phase Three</strong>
+The commits regarding this phase start from <a href="https://gerrit.libreoffice.org/c/core/&#43;/119541" target="_blank">Create SvmWriter class</a> and end at <a href="https://gerrit.libreoffice.org/c/core/&#43;/120372" target="_blank">Add Handler for TextLineColor Write</a></p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/119541" target="_blank">Create SvmWriter class</a></p>
+<ul>
+<li>Create the required files for a new class and update the appropriate makefile</li>
+<li>Create a constructor</li>
+<li>Create the MetaActionHandler and the ActionHandler which replaces MetaAction::Write.</li>
+<li>Create the Write method. It sets up the stream and calls the MetaActionHandler. At this stage the MetaActionHandler uses the original read functionality (MetaAction::Write) for all actions except MetaAction. The next commits continue replacing with the new one.</li>
+<li>Update svmtest.cxx in order to use SvmWriter::Write instead of GDIMetaFile::Write</li>
+</ul>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/119733" target="_blank">Add Handler for Ellipse Write</a></p>
+<ul>
+<li>Create the EllipseHandler</li>
+<li>Adjust the MetaActionHandler to call the EllipseHandler where needed. Thus, the new read functionality is used instead of the MetaPointAction::Write</li>
+</ul>
+<p><strong>Phase Four</strong>
+The commits regarding this phase start with “Replace”</p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/120376" target="_blank">Replace ReadGDIMetaFile with Svmreader::Read</a></p>
+<ul>
+<li>
+<p>Removes the old method call</p>
+</li>
+<li>
+<p>Creates a SvmReader object and calls SvmReader::Read, thus replacing the old Read with the new</p>
+<p><strong>Note</strong>: These steps are repeated for each file that needs replacing</p>
+</li>
+</ul>
+<p><strong>Phase Five</strong>
+The commits regarding this phase start with &ldquo;Remove&rdquo;. It also includes the commit <a href="https://gerrit.libreoffice.org/c/core/&#43;/120414" target="_blank">Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum</a></p>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/120409" target="_blank">Remove unused methods from gdimtf.hxx</a></p>
+<ul>
+<li>
+<p>Removes GDIMetaFile::Read</p>
+</li>
+<li>
+<p>Removes GDIMetaFile::Write</p>
+</li>
+<li>
+<p>Removes ReadGDIMetaFile</p>
+</li>
+<li>
+<p>Removes WriteGDIMetaFile</p>
+<p><strong>Note:</strong> This can be done, as the functionality of the removed methods is covered by SvmReader, SvmWriter.</p>
+</li>
+</ul>
+<p>Example: <a href="https://gerrit.libreoffice.org/c/core/&#43;/120414" target="_blank">Move GDIMetaFile::GetChecksum to SvmWriter::GetChecksum</a></p>
+<ul>
+<li>
+<p>Moves the method to SvmWriter while applying any changes needed in order to be compatible</p>
+</li>
+<li>
+<p>Removes the method from it&rsquo;s initial location</p>
+<p><strong>Note:</strong> This change was required as the method was using MetaAction::Write, which is replaced by the SvmWriter.</p>
+</li>
+</ul>
+
+
+<h3 class="relative group">Next Steps 
+    <div id="next-steps" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#next-steps" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>The remaining steps for the completion of the project are</p>
+<ul>
+<li>Go through the tests of the svm format trying to find edge cases and if so, write tests for them</li>
+</ul>
+<p>Those steps do not need to be implemented by someone else however as I am determined to see this project to the end, even if it it goes beyond the GSoC Coding period.</p>
+
+
+<h3 class="relative group">Conclusion 
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Working at LibreOffice was a beautiful experience. Getting in touch with people all over the world while aiming at the same goal was something new for me, but definitely something I will seek in the future! I would also like to thank the dev community for it&rsquo;s constant support on all my questions (silly or not) and especially my mentors Tomaž Vajngerl, Miklos Vajna for their continuous support as without them I would not be able to progress. Lastly, as I had a great experience, I plan to continue contributing to LibreOffice in the feature! Sere you all around!</p>
+
+
+<h3 class="relative group">Commit List 
+    <div id="commit-list" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#commit-list" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>All the commits regarding the project and thus listed below, have been <strong>successfully merged</strong>.</p>
+<p>The commits are:</p>
+<ol>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116780" target="_blank">https://gerrit.libreoffice.org/c/core/+/116780</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116819" target="_blank">https://gerrit.libreoffice.org/c/core/+/116819</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116967" target="_blank">https://gerrit.libreoffice.org/c/core/+/116967</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/116959" target="_blank">https://gerrit.libreoffice.org/c/core/+/116959</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117153" target="_blank">https://gerrit.libreoffice.org/c/core/+/117153</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117232" target="_blank">https://gerrit.libreoffice.org/c/core/+/117232</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117245" target="_blank">https://gerrit.libreoffice.org/c/core/+/117245</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117155" target="_blank">https://gerrit.libreoffice.org/c/core/+/117155</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117368" target="_blank">https://gerrit.libreoffice.org/c/core/+/117368</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117575" target="_blank">https://gerrit.libreoffice.org/c/core/+/117575</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117702" target="_blank">https://gerrit.libreoffice.org/c/core/+/117702</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/117694" target="_blank">https://gerrit.libreoffice.org/c/core/+/117694</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118143" target="_blank">https://gerrit.libreoffice.org/c/core/+/118143</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118275" target="_blank">https://gerrit.libreoffice.org/c/core/+/118275</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118217" target="_blank">https://gerrit.libreoffice.org/c/core/+/118217</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118396" target="_blank">https://gerrit.libreoffice.org/c/core/+/118396</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118398" target="_blank">https://gerrit.libreoffice.org/c/core/+/118398</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118399" target="_blank">https://gerrit.libreoffice.org/c/core/+/118399</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118403" target="_blank">https://gerrit.libreoffice.org/c/core/+/118403</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118433" target="_blank">https://gerrit.libreoffice.org/c/core/+/118433</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118473" target="_blank">https://gerrit.libreoffice.org/c/core/+/118473</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118545" target="_blank">https://gerrit.libreoffice.org/c/core/+/118545</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118550" target="_blank">https://gerrit.libreoffice.org/c/core/+/118550</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118565" target="_blank">https://gerrit.libreoffice.org/c/core/+/118565</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118566" target="_blank">https://gerrit.libreoffice.org/c/core/+/118566</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118598" target="_blank">https://gerrit.libreoffice.org/c/core/+/118598</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118608" target="_blank">https://gerrit.libreoffice.org/c/core/+/118608</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118610" target="_blank">https://gerrit.libreoffice.org/c/core/+/118610</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118633" target="_blank">https://gerrit.libreoffice.org/c/core/+/118633</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118636" target="_blank">https://gerrit.libreoffice.org/c/core/+/118636</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118637" target="_blank">https://gerrit.libreoffice.org/c/core/+/118637</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118653" target="_blank">https://gerrit.libreoffice.org/c/core/+/118653</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118665" target="_blank">https://gerrit.libreoffice.org/c/core/+/118665</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118667" target="_blank">https://gerrit.libreoffice.org/c/core/+/118667</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118672" target="_blank">https://gerrit.libreoffice.org/c/core/+/118672</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118673" target="_blank">https://gerrit.libreoffice.org/c/core/+/118673</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118674" target="_blank">https://gerrit.libreoffice.org/c/core/+/118674</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118677" target="_blank">https://gerrit.libreoffice.org/c/core/+/118677</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118698" target="_blank">https://gerrit.libreoffice.org/c/core/+/118698</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118829" target="_blank">https://gerrit.libreoffice.org/c/core/+/118829</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118833" target="_blank">https://gerrit.libreoffice.org/c/core/+/118833</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118834" target="_blank">https://gerrit.libreoffice.org/c/core/+/118834</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118836" target="_blank">https://gerrit.libreoffice.org/c/core/+/118836</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118830" target="_blank">https://gerrit.libreoffice.org/c/core/+/118830</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118837" target="_blank">https://gerrit.libreoffice.org/c/core/+/118837</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118845" target="_blank">https://gerrit.libreoffice.org/c/core/+/118845</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118892" target="_blank">https://gerrit.libreoffice.org/c/core/+/118892</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118894" target="_blank">https://gerrit.libreoffice.org/c/core/+/118894</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118895" target="_blank">https://gerrit.libreoffice.org/c/core/+/118895</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118896" target="_blank">https://gerrit.libreoffice.org/c/core/+/118896</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118955" target="_blank">https://gerrit.libreoffice.org/c/core/+/118955</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118956" target="_blank">https://gerrit.libreoffice.org/c/core/+/118956</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118957" target="_blank">https://gerrit.libreoffice.org/c/core/+/118957</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118967" target="_blank">https://gerrit.libreoffice.org/c/core/+/118967</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118968" target="_blank">https://gerrit.libreoffice.org/c/core/+/118968</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118979" target="_blank">https://gerrit.libreoffice.org/c/core/+/118979</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118980" target="_blank">https://gerrit.libreoffice.org/c/core/+/118980</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/118981" target="_blank">https://gerrit.libreoffice.org/c/core/+/118981</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119092" target="_blank">https://gerrit.libreoffice.org/c/core/+/119092</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119170" target="_blank">https://gerrit.libreoffice.org/c/core/+/119170</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119171" target="_blank">https://gerrit.libreoffice.org/c/core/+/119171</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119192" target="_blank">https://gerrit.libreoffice.org/c/core/+/119192</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119193" target="_blank">https://gerrit.libreoffice.org/c/core/+/119193</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119194" target="_blank">https://gerrit.libreoffice.org/c/core/+/119194</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119537" target="_blank">https://gerrit.libreoffice.org/c/core/+/119537</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119538" target="_blank">https://gerrit.libreoffice.org/c/core/+/119538</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119539" target="_blank">https://gerrit.libreoffice.org/c/core/+/119539</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119541" target="_blank">https://gerrit.libreoffice.org/c/core/+/119541</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119580" target="_blank">https://gerrit.libreoffice.org/c/core/+/119580</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119591" target="_blank">https://gerrit.libreoffice.org/c/core/+/119591</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119592" target="_blank">https://gerrit.libreoffice.org/c/core/+/119592</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119593" target="_blank">https://gerrit.libreoffice.org/c/core/+/119593</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119594" target="_blank">https://gerrit.libreoffice.org/c/core/+/119594</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119733" target="_blank">https://gerrit.libreoffice.org/c/core/+/119733</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119734" target="_blank">https://gerrit.libreoffice.org/c/core/+/119734</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119735" target="_blank">https://gerrit.libreoffice.org/c/core/+/119735</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119736" target="_blank">https://gerrit.libreoffice.org/c/core/+/119736</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119737" target="_blank">https://gerrit.libreoffice.org/c/core/+/119737</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119738" target="_blank">https://gerrit.libreoffice.org/c/core/+/119738</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119846" target="_blank">https://gerrit.libreoffice.org/c/core/+/119846</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119898" target="_blank">https://gerrit.libreoffice.org/c/core/+/119898</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119899" target="_blank">https://gerrit.libreoffice.org/c/core/+/119899</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119900" target="_blank">https://gerrit.libreoffice.org/c/core/+/119900</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119901" target="_blank">https://gerrit.libreoffice.org/c/core/+/119901</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119902" target="_blank">https://gerrit.libreoffice.org/c/core/+/119902</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119903" target="_blank">https://gerrit.libreoffice.org/c/core/+/119903</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119920" target="_blank">https://gerrit.libreoffice.org/c/core/+/119920</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119921" target="_blank">https://gerrit.libreoffice.org/c/core/+/119921</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119922" target="_blank">https://gerrit.libreoffice.org/c/core/+/119922</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119923" target="_blank">https://gerrit.libreoffice.org/c/core/+/119923</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119924" target="_blank">https://gerrit.libreoffice.org/c/core/+/119924</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119925" target="_blank">https://gerrit.libreoffice.org/c/core/+/119925</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119963" target="_blank">https://gerrit.libreoffice.org/c/core/+/119963</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119964" target="_blank">https://gerrit.libreoffice.org/c/core/+/119964</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119965" target="_blank">https://gerrit.libreoffice.org/c/core/+/119965</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119966" target="_blank">https://gerrit.libreoffice.org/c/core/+/119966</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119967" target="_blank">https://gerrit.libreoffice.org/c/core/+/119967</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/119968" target="_blank">https://gerrit.libreoffice.org/c/core/+/119968</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120106" target="_blank">https://gerrit.libreoffice.org/c/core/+/120106</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120107" target="_blank">https://gerrit.libreoffice.org/c/core/+/120107</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120108" target="_blank">https://gerrit.libreoffice.org/c/core/+/120108</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120109" target="_blank">https://gerrit.libreoffice.org/c/core/+/120109</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120110" target="_blank">https://gerrit.libreoffice.org/c/core/+/120110</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120111" target="_blank">https://gerrit.libreoffice.org/c/core/+/120111</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120153" target="_blank">https://gerrit.libreoffice.org/c/core/+/120153</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120154" target="_blank">https://gerrit.libreoffice.org/c/core/+/120154</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120155" target="_blank">https://gerrit.libreoffice.org/c/core/+/120155</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120156" target="_blank">https://gerrit.libreoffice.org/c/core/+/120156</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120157" target="_blank">https://gerrit.libreoffice.org/c/core/+/120157</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120158" target="_blank">https://gerrit.libreoffice.org/c/core/+/120158</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120256" target="_blank">https://gerrit.libreoffice.org/c/core/+/120256</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120257" target="_blank">https://gerrit.libreoffice.org/c/core/+/120257</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120258" target="_blank">https://gerrit.libreoffice.org/c/core/+/120258</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120259" target="_blank">https://gerrit.libreoffice.org/c/core/+/120259</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120263" target="_blank">https://gerrit.libreoffice.org/c/core/+/120263</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120264" target="_blank">https://gerrit.libreoffice.org/c/core/+/120264</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120306" target="_blank">https://gerrit.libreoffice.org/c/core/+/120306</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120307" target="_blank">https://gerrit.libreoffice.org/c/core/+/120307</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120308" target="_blank">https://gerrit.libreoffice.org/c/core/+/120308</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120309" target="_blank">https://gerrit.libreoffice.org/c/core/+/120309</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120312" target="_blank">https://gerrit.libreoffice.org/c/core/+/120312</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120313" target="_blank">https://gerrit.libreoffice.org/c/core/+/120313</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120349" target="_blank">https://gerrit.libreoffice.org/c/core/+/120349</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120350" target="_blank">https://gerrit.libreoffice.org/c/core/+/120350</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120351" target="_blank">https://gerrit.libreoffice.org/c/core/+/120351</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120372" target="_blank">https://gerrit.libreoffice.org/c/core/+/120372</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120376" target="_blank">https://gerrit.libreoffice.org/c/core/+/120376</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120408" target="_blank">https://gerrit.libreoffice.org/c/core/+/120408</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120409" target="_blank">https://gerrit.libreoffice.org/c/core/+/120409</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120414" target="_blank">https://gerrit.libreoffice.org/c/core/+/120414</a></li>
+<li><a href="https://gerrit.libreoffice.org/c/core/&#43;/120471" target="_blank">https://gerrit.libreoffice.org/c/core/+/120471</a></li>
+</ol>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/gsoc\/index.md"
+        var oid_likes = "likes_posts\/gsoc\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/welcome/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Welcome</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2021-08-05T00:00:00&#43;00:00">5 August 2021</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/infrastructure/ollama_server/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Secure Self-Hosted Ollama Server</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-10-26T19:22:03&#43;00:00">26 October 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2024
+      Panos Korovesis
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://example.org/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
