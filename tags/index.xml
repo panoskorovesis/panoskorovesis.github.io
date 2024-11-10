@@ -11,6 +11,16 @@
     <copyright>© 2024 Panos Korovesis</copyright>
     <lastBuildDate>Sat, 26 Oct 2024 19:22:03 +0000</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Caddy</title>
+      <link>https://example.org/tags/caddy/</link>
+      <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/tags/caddy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://example.org/tags/docker/</link>
       <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
