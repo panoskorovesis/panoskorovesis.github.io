@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on The Space 🌍</title>
+    <link>https://example.org/categories/personal/</link>
+    <description>Recent content in Personal on The Space 🌍</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+    <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
+    <copyright>© 2026 Panos Korovesis</copyright>
+    <lastBuildDate>Wed, 26 Nov 2025 10:22:03 +0000</lastBuildDate><atom:link href="https://example.org/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Professional Timeline</title>
+      <link>https://example.org/posts/personal/cv/</link>
+      <pubDate>Wed, 26 Nov 2025 10:22:03 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/posts/personal/cv/</guid>
+      <description>A chronological overview of my professional experience and educational journey</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://example.org/posts/personal/cv/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>https://example.org/posts/welcome/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>https://example.org/posts/welcome/</guid>
+      <description>A few words about me</description>
+      
+    </item>
+    
+  </channel>
+</rss>
