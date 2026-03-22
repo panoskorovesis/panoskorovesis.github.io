@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vector Embeddings on The Space 🌍</title>
+    <link>http://localhost:1313/tags/vector-embeddings/</link>
+    <description>Recent content in Vector Embeddings on The Space 🌍</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
+    <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
+    <copyright>© 2026 Panos Korovesis</copyright>
+    <atom:link href="http://localhost:1313/tags/vector-embeddings/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LLaMoT: Leveraging Large Language Models for Entity Resolution</title>
+      <link>http://localhost:1313/posts/masters/thesis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
+      <guid>http://localhost:1313/posts/masters/thesis/</guid>
+      <description>An in-depth look at my MSc Thesis on LLaMoT: Utilizing open-source LLMs to redefine Entity Resolution through Prompt-based and Embedding-based Matching.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
