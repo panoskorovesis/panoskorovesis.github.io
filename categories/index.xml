@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on The Space 🌍</title>
-    <link>https://example.org/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on The Space 🌍</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
     <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
     <copyright>© 2026 Panos Korovesis</copyright>
-    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Engineering</title>
-      <link>https://example.org/categories/engineering/</link>
+      <link>http://localhost:1313/categories/engineering/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>https://example.org/categories/engineering/</guid>
+      <guid>http://localhost:1313/categories/engineering/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Research</title>
-      <link>https://example.org/categories/research/</link>
+      <link>http://localhost:1313/categories/research/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>https://example.org/categories/research/</guid>
+      <guid>http://localhost:1313/categories/research/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Personal</title>
-      <link>https://example.org/categories/personal/</link>
+      <link>http://localhost:1313/categories/personal/</link>
       <pubDate>Wed, 26 Nov 2025 10:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>https://example.org/categories/personal/</guid>
+      <guid>http://localhost:1313/categories/personal/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Infrastructure</title>
-      <link>https://example.org/categories/infrastructure/</link>
+      <link>http://localhost:1313/categories/infrastructure/</link>
       <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>https://example.org/categories/infrastructure/</guid>
+      <guid>http://localhost:1313/categories/infrastructure/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>GSoC</title>
-      <link>https://example.org/categories/gsoc/</link>
+      <link>http://localhost:1313/categories/gsoc/</link>
       <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>https://example.org/categories/gsoc/</guid>
+      <guid>http://localhost:1313/categories/gsoc/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>LibreOffice</title>
-      <link>https://example.org/categories/libreoffice/</link>
+      <link>http://localhost:1313/categories/libreoffice/</link>
       <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>https://example.org/categories/libreoffice/</guid>
+      <guid>http://localhost:1313/categories/libreoffice/</guid>
       <description></description>
       
     </item>
