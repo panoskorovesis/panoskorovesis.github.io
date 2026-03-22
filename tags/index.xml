@@ -2,121 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on The Space 🌍</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://panoskorovesis.github.io/tags/</link>
     <description>Recent content in Tags on The Space 🌍</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
     <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
     <copyright>© 2026 Panos Korovesis</copyright>
-    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Data Science</title>
-      <link>http://localhost:1313/tags/data-science/</link>
+      <link>https://panoskorovesis.github.io/tags/data-science/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/data-science/</guid>
+      <guid>https://panoskorovesis.github.io/tags/data-science/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entity Resolution</title>
-      <link>http://localhost:1313/tags/entity-resolution/</link>
+      <link>https://panoskorovesis.github.io/tags/entity-resolution/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/entity-resolution/</guid>
+      <guid>https://panoskorovesis.github.io/tags/entity-resolution/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>LLM</title>
-      <link>http://localhost:1313/tags/llm/</link>
+      <link>https://panoskorovesis.github.io/tags/llm/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/llm/</guid>
+      <guid>https://panoskorovesis.github.io/tags/llm/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Open-Source</title>
-      <link>http://localhost:1313/tags/open-source/</link>
+      <link>https://panoskorovesis.github.io/tags/open-source/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/open-source/</guid>
+      <guid>https://panoskorovesis.github.io/tags/open-source/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Vector Search</title>
-      <link>http://localhost:1313/tags/vector-search/</link>
+      <link>https://panoskorovesis.github.io/tags/vector-search/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/vector-search/</guid>
+      <guid>https://panoskorovesis.github.io/tags/vector-search/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Cv</title>
-      <link>http://localhost:1313/tags/cv/</link>
+      <link>https://panoskorovesis.github.io/tags/cv/</link>
       <pubDate>Wed, 26 Nov 2025 10:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/cv/</guid>
+      <guid>https://panoskorovesis.github.io/tags/cv/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Caddy</title>
-      <link>http://localhost:1313/tags/caddy/</link>
+      <link>https://panoskorovesis.github.io/tags/caddy/</link>
       <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/caddy/</guid>
+      <guid>https://panoskorovesis.github.io/tags/caddy/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>https://panoskorovesis.github.io/tags/docker/</link>
       <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>https://panoskorovesis.github.io/tags/docker/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Ollama</title>
-      <link>http://localhost:1313/tags/ollama/</link>
+      <link>https://panoskorovesis.github.io/tags/ollama/</link>
       <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/ollama/</guid>
+      <guid>https://panoskorovesis.github.io/tags/ollama/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>C&#43;&#43;</title>
-      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <link>https://panoskorovesis.github.io/tags/c&#43;&#43;/</link>
       <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
+      <guid>https://panoskorovesis.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Thoughts</title>
-      <link>http://localhost:1313/tags/thoughts/</link>
+      <link>https://panoskorovesis.github.io/tags/thoughts/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/tags/thoughts/</guid>
+      <guid>https://panoskorovesis.github.io/tags/thoughts/</guid>
       <description></description>
       
     </item>

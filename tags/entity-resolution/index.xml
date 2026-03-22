@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Entity Resolution on The Space 🌍</title>
-    <link>http://localhost:1313/tags/entity-resolution/</link>
+    <link>https://panoskorovesis.github.io/tags/entity-resolution/</link>
     <description>Recent content in Entity Resolution on The Space 🌍</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
     <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
     <copyright>© 2026 Panos Korovesis</copyright>
-    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/entity-resolution/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/tags/entity-resolution/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LLaMoT: Redefining Entity Resolution with Open-Source LLMs</title>
-      <link>http://localhost:1313/posts/masters/thesis/</link>
+      <link>https://panoskorovesis.github.io/posts/masters/thesis/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/posts/masters/thesis/</guid>
+      <guid>https://panoskorovesis.github.io/posts/masters/thesis/</guid>
       <description>A deep dive into my MSc thesis: Leveraging small-scale, open-source LLMs to achieve state-of-the-art results in zero-shot Entity Resolution.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/masters/thesis/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://panoskorovesis.github.io/posts/masters/thesis/featured.jpg" />
     </item>
     
   </channel>

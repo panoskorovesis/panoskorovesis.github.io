@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on The Space 🌍</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://panoskorovesis.github.io/categories/</link>
     <description>Recent content in Categories on The Space 🌍</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>panoskorovesis@outlook.com (Panos Korovesis)</managingEditor>
     <webMaster>panoskorovesis@outlook.com (Panos Korovesis)</webMaster>
     <copyright>© 2026 Panos Korovesis</copyright>
-    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Mar 2026 10:13:03 +0000</lastBuildDate><atom:link href="https://panoskorovesis.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Engineering</title>
-      <link>http://localhost:1313/categories/engineering/</link>
+      <link>https://panoskorovesis.github.io/categories/engineering/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/categories/engineering/</guid>
+      <guid>https://panoskorovesis.github.io/categories/engineering/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Research</title>
-      <link>http://localhost:1313/categories/research/</link>
+      <link>https://panoskorovesis.github.io/categories/research/</link>
       <pubDate>Sun, 22 Mar 2026 10:13:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/categories/research/</guid>
+      <guid>https://panoskorovesis.github.io/categories/research/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Personal</title>
-      <link>http://localhost:1313/categories/personal/</link>
+      <link>https://panoskorovesis.github.io/categories/personal/</link>
       <pubDate>Wed, 26 Nov 2025 10:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/categories/personal/</guid>
+      <guid>https://panoskorovesis.github.io/categories/personal/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Infrastructure</title>
-      <link>http://localhost:1313/categories/infrastructure/</link>
+      <link>https://panoskorovesis.github.io/categories/infrastructure/</link>
       <pubDate>Sat, 26 Oct 2024 19:22:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/categories/infrastructure/</guid>
+      <guid>https://panoskorovesis.github.io/categories/infrastructure/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>GSoC</title>
-      <link>http://localhost:1313/categories/gsoc/</link>
+      <link>https://panoskorovesis.github.io/categories/gsoc/</link>
       <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/categories/gsoc/</guid>
+      <guid>https://panoskorovesis.github.io/categories/gsoc/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>LibreOffice</title>
-      <link>http://localhost:1313/categories/libreoffice/</link>
+      <link>https://panoskorovesis.github.io/categories/libreoffice/</link>
       <pubDate>Sun, 22 Aug 2021 11:30:03 +0000</pubDate>
       <author>panoskorovesis@outlook.com (Panos Korovesis)</author>
-      <guid>http://localhost:1313/categories/libreoffice/</guid>
+      <guid>https://panoskorovesis.github.io/categories/libreoffice/</guid>
       <description></description>
       
     </item>
